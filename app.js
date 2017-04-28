@@ -4,7 +4,7 @@ const server = restify.createServer({
     version: '1.0.0'
 });
 
-const myIp = 'http://192.168.0.102'
+const myIp = 'http://192.168.33.12'
 
 server.use(restify.queryParser());
 server.use(restify.bodyParser());
@@ -15,75 +15,129 @@ function getAll(request, response, next) {
             id: 1, 
             name: "Paciente 01",
             problem: "necessita de cuiados continuados",
-            materials: [{
-                idx: 0, name: "Material 01", 
-                type: "pdf",
-                strLink:  myIp + ":8080/materials/st_7_2.pdf"},
-                {
-                    idx: 1, name: "Material 02",
-                    type: "pdf",
-                    strLink: myIp + ":8080/materials/st_7_2.pdf"
+            needs: [{
+                        id: 0, 
+                        name: "necessidade 01",
+                        
+                        materials: [{
+                                        idx: 0, name: "Material 01",
+                                        type: "pdf",
+                                        strLink: myIp + ":8080/materials/st_7_2.pdf"
+                                    },
+                                    {
+                                        idx: 1, name: "Material 02",
+                                        type: "pdf",
+                                        strLink: myIp + ":8080/materials/st_7_2.pdf"
+                                    }]
+                     },
+                    {
+                        id: 1,
+                        name: "Necessidade 02",
+
+                        materials: [{
+                            idx: 0, name: "Material 01",
+                            type: "pdf",
+                            strLink: myIp + ":8080/materials/st_7_2.pdf"
+                        },
+                        {
+                            idx: 1, name: "Material 02",
+                            type: "pdf",
+                            strLink: myIp + ":8080/materials/st_7_2.pdf"
+                        }]
+                    }]
+            }, 
+            {
+                id: 2,
+                name: "Paciente 02",
+                problem: "necessita de cuiados continuados 2",
+                needs: [{
+                    id: 0,
+                    name: "necessidade 01",
+
+                    materials: [{
+                        idx: 0, name: "Material 01",
+                        type: "pdf",
+                        strLink: myIp + ":8080/materials/st_7_2.pdf"
+                    },
+                    {
+                        idx: 1, name: "Material 02",
+                        type: "pdf",
+                        strLink: myIp + ":8080/materials/st_7_2.pdf"
+                    }]
                 },
+                {
+                    id: 1,
+                    name: "Necessidade 02",
 
-
-                 
-                         ]},
-        {
-            id: 2,
-             name: "Paciente 02",
-              problem: "necessita de cuiados continuados2",
-              materials: [{
-                  idx: 0, name: "Material 01",
-                  type: "jpg",
-                  strLink: myIp + ":8080/materials/imagem01.jpg"
-              },
-                  {
-                      idx: 1, name: "Material 02 ",
-                      type: "pdf",
-                      strLink: myIp + ":8080/materials/st_7_2.pdf"
-                  },
-                  {
-                      idx: 2, name: "Material 03",
-                      type: "mp4",
-                      strLink: myIp + ":8080/materials/movie_file_1.mp4"
-                  }
-                  ]},
-        {
-            id: 3, name: "Paciente 03", problem: "necessita de cuiados continuados3", materials: [{
-                idx: 0, name: "Material 01",
-                type: "jpg",
-                strLink: myIp + ":8080/materials/imagem01.jpg"
+                    materials: [{
+                        idx: 0, name: "Material 01",
+                        type: "jpg",
+                        strLink: myIp + ":8080/materials/imagem01.jpg"
+                    },
+                    {
+                        idx: 1, name: "Material 02 ",
+                        type: "pdf",
+                        strLink: myIp + ":8080/materials/st_7_2.txt"
+                    },
+                    {
+                        idx: 2, name: "Material 03",
+                        type: "mp4",
+                        strLink: myIp + ":8080/materials/movie_file_1.mp4"
+                    }]
+                }]
             },
+            {
+                id: 3,
+                name: "Paciente 03",
+                problem: "necessita de cuiados continuados 2",
+                needs: [{
+                    id: 0,
+                    name: "necessidade 01",
+
+                    materials: [{
+                        idx: 0, name: "Material 01",
+                        type: "pdf",
+                        strLink: myIp + ":8080/materials/st_7_2.txt"
+                    },
+                    {
+                        idx: 1, name: "Material 02",
+                        type: "pdf",
+                        strLink: myIp + ":8080/materials/st_7_2.txt"
+                    }]
+                },
+                {
+                    id: 1,
+                    name: "Necessidade 02",
+
+                    materials: [{
+                        idx: 0, name: "Material 01",
+                        type: "jpg",
+                        strLink: myIp + ":8080/materials/imagem01.jpg"
+                    },
+                    {
+                        idx: 1, name: "Material 02 ",
+                        type: "pdf",
+                        strLink: myIp + ":8080/materials/st_7_2.txt"
+                    },
+                    {
+                        idx: 2, name: "Material 03",
+                        type: "mp4",
+                        strLink: myIp + ":8080/materials/movie_file_1.mp4"
+                    }, {
+                        idx: 3, name: "Material 06 ",
+                        type: "pdf",
+                        strLink: myIp + ":8080/materials/st_7_2.txt"
+                    }
+                    ]
+                }]
+            }]
+
            
-            {
-                idx: 1, name: "Material 03",
-                type: "mp4",
-                strLink: myIp + ":8080/materials/movie_file_1.mp4"
-            }
-            ]
-        },
-        {
-            id: 4, name: "Paciente 04", problem: "necessita de cuiados continuados4", materials: [{
-                idx: 0, name: "Material 01",
-                type: "jpg",
-                strLink: myIp + ":8080/materials/imagem01.jpg"
-            },
-            {
-                idx: 1, name: "Material 02 ",
-                type: "pdf",
-                strLink: myIp + ":8080/materials/st_7_2.pdf"
-            },
-            {
-               idx: 2, name: "Material 03",
-                type: "mp4",
-                strLink: myIp + ":8080/materials/movie_file_1.mp4"
-            }, {
-                idx: 3, name: "Material 06 ",
-                type: "pdf",
-                strLink: myIp + ":8080/materials/st_7_2.pdf"
-            }
-            ]
-         }]
+
+
+
+            
+            
         ;
 
 

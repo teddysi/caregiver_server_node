@@ -21,13 +21,15 @@ function getAll(request, response, next) {
                         
                         materials: [{
                                         idx: 0, name: "Material 01",
-                                        type: "pdf",
-                                        strLink: myIp + ":8080/materials/st_7_2.pdf"
+                                        type: "txt",
+                                        strLink: myIp + ":8080/materials/st_7_2.txt"
+                                        ,dateCreation: "2017-04-25"
                                     },
                                     {
                                         idx: 1, name: "Material 02",
-                                        type: "pdf",
-                                        strLink: myIp + ":8080/materials/st_7_2.pdf"
+                                        type: "txt",
+                                        strLink: myIp + ":8080/materials/st_7_2.txt"
+                                        , dateCreation: "2017-04-25"
                                     }]
                      },
                     {
@@ -36,13 +38,15 @@ function getAll(request, response, next) {
 
                         materials: [{
                             idx: 0, name: "Material 01",
-                            type: "pdf",
-                            strLink: myIp + ":8080/materials/st_7_2.pdf"
+                            type: "txt",
+                            strLink: myIp + ":8080/materials/st_7_2.txt"
+                            , dateCreation: "2017-04-25"
                         },
                         {
                             idx: 1, name: "Material 02",
-                            type: "pdf",
-                            strLink: myIp + ":8080/materials/st_7_2.pdf"
+                            type: "txt",
+                            strLink: myIp + ":8080/materials/st_7_2.txt"
+                            , dateCreation: "2017-04-25"
                         }]
                     }]
             }, 
@@ -56,13 +60,15 @@ function getAll(request, response, next) {
 
                     materials: [{
                         idx: 0, name: "Material 01",
-                        type: "pdf",
-                        strLink: myIp + ":8080/materials/st_7_2.pdf"
+                        type: "txt",
+                        strLink: myIp + ":8080/materials/st_7_2.txt"
+                        , dateCreation: "2017-04-25"
                     },
                     {
                         idx: 1, name: "Material 02",
-                        type: "pdf",
-                        strLink: myIp + ":8080/materials/st_7_2.pdf"
+                        type: "txt",
+                        strLink: myIp + ":8080/materials/st_7_2.txt"
+                        , dateCreation: "2017-04-25"
                     }]
                 },
                 {
@@ -73,16 +79,19 @@ function getAll(request, response, next) {
                         idx: 0, name: "Material 01",
                         type: "jpg",
                         strLink: myIp + ":8080/materials/imagem01.jpg"
+                        , dateCreation: "2017-04-25"
                     },
                     {
                         idx: 1, name: "Material 02 ",
-                        type: "pdf",
+                        type: "txt",
                         strLink: myIp + ":8080/materials/st_7_2.txt"
+                        , dateCreation: "2017-04-25"
                     },
                     {
                         idx: 2, name: "Material 03",
                         type: "mp4",
                         strLink: myIp + ":8080/materials/movie_file_1.mp4"
+                        , dateCreation: "2017-04-25"
                     }]
                 }]
             },
@@ -96,13 +105,15 @@ function getAll(request, response, next) {
 
                     materials: [{
                         idx: 0, name: "Material 01",
-                        type: "pdf",
+                        type: "txt",
                         strLink: myIp + ":8080/materials/st_7_2.txt"
+                        , dateCreation: "2017-04-25"
                     },
                     {
                         idx: 1, name: "Material 02",
-                        type: "pdf",
+                        type: "txt",
                         strLink: myIp + ":8080/materials/st_7_2.txt"
+                        , dateCreation: "2017-04-25"
                     }]
                 },
                 {
@@ -113,20 +124,24 @@ function getAll(request, response, next) {
                         idx: 0, name: "Material 01",
                         type: "jpg",
                         strLink: myIp + ":8080/materials/imagem01.jpg"
+                        , dateCreation: "2017-04-25"
                     },
                     {
                         idx: 1, name: "Material 02 ",
-                        type: "pdf",
+                        type: "txt",
                         strLink: myIp + ":8080/materials/st_7_2.txt"
+                        , dateCreation: "2017-04-25"
                     },
                     {
                         idx: 2, name: "Material 03",
                         type: "mp4",
                         strLink: myIp + ":8080/materials/movie_file_1.mp4"
+                        , dateCreation: "2017-04-25"
                     }, {
                         idx: 3, name: "Material 06 ",
-                        type: "pdf",
+                        type: "txt",
                         strLink: myIp + ":8080/materials/st_7_2.txt"
+                        , dateCreation: "2017-04-25"
                     }
                     ]
                 }]

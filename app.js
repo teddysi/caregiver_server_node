@@ -4,7 +4,7 @@ const server = restify.createServer({
     version: '1.0.0'
 });
 
-const myIp = 'http://192.168.33.12'
+const myIp = 'http://192.168.0.102'
 
 server.use(restify.queryParser());
 server.use(restify.bodyParser());
@@ -12,147 +12,186 @@ server.use(restify.bodyParser());
 function getAll(request, response, next) {
     const leaderboard =
         [{
-            id: 1, 
+            id: 1,
             name: "Paciente 01",
             problem: "necessita de cuiados continuados",
             needs: [{
-                        id: 0, 
-                        name: "necessidade 01",
-                        
-                        materials: [{
-                                        idx: 0, name: "Material 01",
-                                        type: "txt",
-                                        strLink: myIp + ":8080/materials/st_7_2.txt"
-                                        ,dateCreation: "2017-04-25"
-                                    },
-                                    {
-                                        idx: 1, name: "Material 02",
-                                        type: "txt",
-                                        strLink: myIp + ":8080/materials/st_7_2.txt"
-                                        , dateCreation: "2017-04-25"
-                                    }]
-                     },
-                    {
-                        id: 1,
-                        name: "Necessidade 02",
+                id: 0,
+                name: "necessidade 01",
 
-                        materials: [{
-                            idx: 0, name: "Material 01",
-                            type: "txt",
-                            strLink: myIp + ":8080/materials/st_7_2.txt"
-                            , dateCreation: "2017-04-25"
-                        },
-                        {
-                            idx: 1, name: "Material 02",
-                            type: "txt",
-                            strLink: myIp + ":8080/materials/st_7_2.txt"
-                            , dateCreation: "2017-04-25"
-                        }]
-                    }]
-            }, 
-            {
-                id: 2,
-                name: "Paciente 02",
-                problem: "necessita de cuiados continuados 2",
-                needs: [{
-                    id: 0,
-                    name: "necessidade 01",
-
-                    materials: [{
-                        idx: 0, name: "Material 01",
-                        type: "txt",
-                        strLink: myIp + ":8080/materials/st_7_2.txt"
-                        , dateCreation: "2017-04-25"
-                    },
-                    {
-                        idx: 1, name: "Material 02",
-                        type: "txt",
-                        strLink: myIp + ":8080/materials/st_7_2.txt"
-                        , dateCreation: "2017-04-25"
-                    }]
+                materials: [{
+                    idx: 0, name: "Material 01",
+                    type: "jpg",
+                    strLink: myIp + ":8080/materials/imagem01.jpg"
+                    , description: ""
+                    , dateCreation: "2017-04-25"
                 },
                 {
-                    id: 1,
-                    name: "Necessidade 02",
+                    idx: 1, name: "Material 02",
+                    type: "txt",
+                    strLink: myIp + ":8080/materials/st_7_2.txt"
 
-                    materials: [{
-                        idx: 0, name: "Material 01",
-                        type: "jpg",
-                        strLink: myIp + ":8080/materials/imagem01.jpg"
-                        , dateCreation: "2017-04-25"
-                    },
-                    {
-                        idx: 1, name: "Material 02 ",
-                        type: "txt",
-                        strLink: myIp + ":8080/materials/st_7_2.txt"
-                        , dateCreation: "2017-04-25"
-                    },
-                    {
-                        idx: 2, name: "Material 03",
-                        type: "mp4",
-                        strLink: myIp + ":8080/materials/movie_file_1.mp4"
-                        , dateCreation: "2017-04-25"
-                    }]
+                    , description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                    , dateCreation: "2017-04-25"
                 }]
             },
             {
-                id: 3,
-                name: "Paciente 03",
-                problem: "necessita de cuiados continuados 2",
-                needs: [{
-                    id: 0,
-                    name: "necessidade 01",
+                id: 1,
+                name: "Necessidade 02",
 
-                    materials: [{
-                        idx: 0, name: "Material 01",
-                        type: "txt",
-                        strLink: myIp + ":8080/materials/st_7_2.txt"
-                        , dateCreation: "2017-04-25"
-                    },
-                    {
-                        idx: 1, name: "Material 02",
-                        type: "txt",
-                        strLink: myIp + ":8080/materials/st_7_2.txt"
-                        , dateCreation: "2017-04-25"
-                    }]
+                materials: [{
+                    idx: 0, name: "Material 01",
+                    type: "txt",
+                    strLink: myIp + ":8080/materials/st_7_2.txt"
+
+                    , description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                    , dateCreation: "2017-04-25"
                 },
                 {
-                    id: 1,
-                    name: "Necessidade 02",
+                    idx: 1, name: "Material 02",
+                    type: "txt",
+                    strLink: myIp + ":8080/materials/st_7_2.txt"
 
-                    materials: [{
-                        idx: 0, name: "Material 01",
-                        type: "jpg",
-                        strLink: myIp + ":8080/materials/imagem01.jpg"
-                        , dateCreation: "2017-04-25"
-                    },
-                    {
-                        idx: 1, name: "Material 02 ",
-                        type: "txt",
-                        strLink: myIp + ":8080/materials/st_7_2.txt"
-                        , dateCreation: "2017-04-25"
-                    },
-                    {
-                        idx: 2, name: "Material 03",
-                        type: "mp4",
-                        strLink: myIp + ":8080/materials/movie_file_1.mp4"
-                        , dateCreation: "2017-04-25"
-                    }, {
-                        idx: 3, name: "Material 06 ",
-                        type: "txt",
-                        strLink: myIp + ":8080/materials/st_7_2.txt"
-                        , dateCreation: "2017-04-25"
-                    }
-                    ]
+                    , description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                    , dateCreation: "2017-04-25"
                 }]
             }]
+        },
+        {
+            id: 2,
+            name: "Paciente 02",
+            problem: "necessita de cuiados continuados 2",
+            needs: [{
+                id: 0,
+                name: "necessidade 01",
 
-           
+                materials: [{
+                    idx: 0, name: "Material 01",
+                    type: "txt",
+                    strLink: myIp + ":8080/materials/st_7_2.txt"
+
+                    , description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                    , dateCreation: "2017-04-25"
+                },
+                {
+                    idx: 1, name: "Material 02",
+                    type: "txt",
+                    strLink: myIp + ":8080/materials/st_7_2.txt"
+
+                    , description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                    , dateCreation: "2017-04-25"
+                }]
+            },
+            {
+                id: 1,
+                name: "Necessidade 02",
+
+                materials: [{
+                    idx: 0, name: "Material 01",
+                    type: "jpg",
+                    strLink: myIp + ":8080/materials/imagem01.jpg"
+
+                    , description: ""
+                    , dateCreation: "2017-04-25"
+                },
+                {
+                    idx: 1, name: "Material 02 ",
+                    type: "txt",
+                    strLink: ""
+
+                    , description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                    , dateCreation: "2017-04-25"
+                },
+                {
+                    idx: 2, name: "Material 03",
+                    type: "mp4",
+                    strLink: myIp + ":8080/materials/movie_file_1.mp4"
+
+                    , description: ""
+                    , dateCreation: "2017-04-25"
+                }]
+            }]
+        },
+        {
+            id: 3,
+            name: "Paciente 03",
+            problem: "necessita de cuiados continuados 2",
+            needs: [{
+                id: 0,
+                name: "necessidade 01",
+
+                materials: [{
+                    idx: 0, name: "Material 01",
+                    type: "txt",
+                    strLink: ""
+
+                    , description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                    , dateCreation: "2017-04-25"
+                },
+                {
+                    idx: 1, name: "Material 02",
+                    type: "mp4",
+                    strLink: myIp + ":8080/materials/movie_file_1.mp4"
+                    , description: ""
+                    , dateCreation: "2017-04-25"
+                }, {
+                    idx: 3, name: "Material 03 ",
+                    type: "jpg",
+                    strLink: myIp + ":8080/materials/imagem01.jpg"
+                    , description: ""
+                    , dateCreation: "2017-04-25"
+                }
+
+                ]
+            },
+            {
+                id: 1,
+                name: "Necessidade 02",
+
+                materials: [{
+                    idx: 0, name: "Material 01",
+                    type: "jpg",
+                    strLink: myIp + ":8080/materials/imagem01.jpg"
+                    , description: ""
+                    , dateCreation: "2017-04-25"
+                },
+                {
+                    idx: 1, name: "Material 02 ",
+                    type: "txt",
+                    strLink: myIp + ":8080/materials/st_7_2.txt"
+                    , description: ""
+                    , dateCreation: "2017-04-25"
+                },
+                {
+                    idx: 3, name: "Material 03 ",
+                    type: "jpg",
+                    strLink: myIp + ":8080/materials/imagem01.jpg"
+                    , description: ""
+                    , dateCreation: "2017-04-25"
+                },
+                {
+                    idx: 2, name: "Material 04",
+                    type: "mp4",
+                    strLink: myIp + ":8080/materials/movie_file_1.mp4"
+                    , description: ""
+                    , dateCreation: "2017-04-25"
+                }, {
+                    idx: 3, name: "Material 06 ",
+                    type: "jpg",
+                    strLink: myIp + ":8080/materials/imagem01.jpg"
+                    , description: ""
+                    , dateCreation: "2017-04-25"
+                }
+                ]
+            }]
+        }]
 
 
 
-            
-            
+
+
+
+
         ;
 
 
@@ -186,7 +225,7 @@ server.listen(8080, myIp.substring(7, 22), function () {
 
     console.log('+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++');
     console.log('Get patients list [ no Auth ] :');
-    console.log('http://'+myIp+':8080/api/v1/patients -> Json list ')
+    console.log('http://' + myIp + ':8080/api/v1/patients -> Json list ')
     console.log('+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++');
     console.log('%s listening at %s', server.name, server.url);
 
